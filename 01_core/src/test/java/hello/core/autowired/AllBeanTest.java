@@ -2,18 +2,27 @@ package hello.core.autowired;
 
 import hello.core.AutoAppConfig;
 import hello.core.discount.DiscountPolicy;
+import hello.core.discount.FixDiscountPolicy;
 import hello.core.member.Grade;
 import hello.core.member.Member;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;
 import java.util.Map;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class AllBeanTest {
+
+    @Test
+    void mmmmm() {
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AutoAppConfig.class);
+
+        FixDiscountPolicy fixDiscountPolicy = ac.getBean(FixDiscountPolicy.class);
+
+        System.out.println("discountService = " + fixDiscountPolicy);
+    }
 
     @Test
     void findAllBean() {
