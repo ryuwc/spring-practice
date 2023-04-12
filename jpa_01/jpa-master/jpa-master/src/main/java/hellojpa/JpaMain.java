@@ -19,10 +19,14 @@ public class JpaMain {
 //        try {
 //            Member member = new Member();
 //
-//            member.setId(2L);
-//            member.setName("helloB");
+//            member.setId(1L);
+//            member.setName("helloA");
+//            Member member1 = new Member(2L, "helloB");
+//            Member member2 = new Member(3L, "helloC");
 //
 //            em.persist(member);
+//            em.persist(member1);
+//            em.persist(member2);
 //
 //            tx.commit();
 //        } catch (Exception e) {
@@ -61,10 +65,11 @@ public class JpaMain {
 //            em.close();
 //        }
 
-        //영속성 컨테이너
         try {
-            Member member = em.find(Member.class, 15L);
-            member.setName("XZZZ");
+            Member member = new Member();
+            member.setUsername("A");
+            em.persist(member);
+
 
             tx.commit();
         } catch (Exception e) {
