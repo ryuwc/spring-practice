@@ -17,7 +17,7 @@
             <property name="hibernate.use_sql_comments" value="true"/>
             <property name="hibernate.jdbc.batch_size" value="10"/>
             <!--            기존 테이블을 삭제 후 다시 생성-->
-<!--                        <property name="hibernate.hbm2ddl.auto" value="create" />-->
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
 
 
             <!--            &lt;!&ndash; 필수 속성 &ndash;&gt;-->
