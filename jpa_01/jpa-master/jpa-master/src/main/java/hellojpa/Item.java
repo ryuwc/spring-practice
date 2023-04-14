@@ -5,19 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Item {
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class Item {
 
     @Id
     @GeneratedValue
-    @Column(name = "ITEM_ID")
     private Long id;
 
     private String name;
     private int price;
-    private int stockQuantity;
-
-    @ManyToMany(mappedBy = "items")
-    private List<Category> categories = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -41,13 +37,5 @@ public class Item {
 
     public void setPrice(int price) {
         this.price = price;
-    }
-
-    public int getStockQuantity() {
-        return stockQuantity;
-    }
-
-    public void setStockQuantity(int stockQuantity) {
-        this.stockQuantity = stockQuantity;
     }
 }

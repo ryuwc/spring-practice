@@ -1,4 +1,4 @@
-package hellojpa;
-
-public enum DeliveryStatus {
-}
+//package hellojpa;
+//
+//public enum DeliveryStatus {
+//}

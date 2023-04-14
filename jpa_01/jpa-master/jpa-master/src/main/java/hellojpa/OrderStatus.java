@@ -1,5 +1,5 @@
-package hellojpa;
-
-public enum OrderStatus {
-    ORDER, CANCEL
-}
+//package hellojpa;
+//
+//public enum OrderStatus {
+//    ORDER, CANCEL
+//}
