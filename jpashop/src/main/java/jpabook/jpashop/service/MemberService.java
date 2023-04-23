@@ -52,4 +52,10 @@ public class MemberService {
     public CommonResponse getErrorResponse(int code, String message) {
         return new CommonResponse(false, code, message);
     }
+
+    @Transactional
+    public void update(Long id, String name) {
+        Member member = memberRepository.findOne(id);
+        member.setName(name);
+    }
 }
