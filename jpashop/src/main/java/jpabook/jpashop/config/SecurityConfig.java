@@ -73,6 +73,7 @@ public class SecurityConfig {
                 .antMatchers("/api/signup").permitAll()
                 .antMatchers(
                         "/h2-console/**",
+                        "/redis",
                         "/favicon.ico",
                         "/error"
                 ).permitAll()
